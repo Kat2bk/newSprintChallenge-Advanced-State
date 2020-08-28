@@ -1,4 +1,10 @@
 
+import {
+    FETCHING_START,
+    FETCHING_SUCCESS,
+    FETCHING_FAILURE
+} from "../actions";
+
 const initialState = {
     smurfs: [],
     error: "",

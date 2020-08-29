@@ -3,7 +3,7 @@ import {gettingSmurfs} from "../actions";
 import {connect} from "react-redux";
 
 const SmurfProfile = (props) => {
-console.log(props)
+console.log("props inside Profile", props)
     const getData = props.gettingSmurfs;
 
     useEffect(() => {

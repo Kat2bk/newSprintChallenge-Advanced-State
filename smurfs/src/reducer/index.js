@@ -5,7 +5,9 @@ import {
     FETCHING_FAILURE,
     POST_START,
     POST_SUCCESS,
-    POST_FAILURE
+    POST_FAILURE,
+    DELETE_SUCCESS,
+    DELETE_FAILURE
 } from "../actions";
 
 const initialState = {
@@ -51,7 +53,19 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 error: action.payload,
                 isFetching: false
-            }
+            };
+        case DELETE_SUCCESS:
+            return {
+                ...state,
+                isFetching: false,
+                smurfs: action.payload
+            };
+        case DELETE_FAILURE:
+            return {
+                ...state,
+                error: action.payload,
+                isFetching: false
+            };
         default:
             return state;
     }

@@ -11,13 +11,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("./image/SmurfCot11adj.jpg");
+  background-size: cover;
 }
 
 .smurf {
-  background-color: rgb(116, 143, 194);
+  background-color: rgb(5, 2, 177);
   margin: 10px;
   padding: 10px;
   width: 50%;
+  border: 2px solid yellow;
 }
 
 .smurf h2 {
@@ -34,7 +37,7 @@ form {
 }
 
 input[type=text] {
-  border: 2px solid black;
+  border: 2px solid yellow;
   border-radius: 4px;
   width: 30%;
   padding: 12px 20px;
@@ -45,8 +48,9 @@ input[type=text] {
 form button {
   padding: 20px;
   border: none;
-  background-color: white;
+  background-color: yellow;
   border-radius: 4px;
   font-size: 20px;
   cursor: pointer;
+  color: black;
 }

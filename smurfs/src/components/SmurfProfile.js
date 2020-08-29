@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import {gettingSmurfs, addSmurf} from "../actions";
 import {connect} from "react-redux";
 import SmurfForm from "./SmurfForm";
+import "../index.css";
 
 const SmurfProfile = (props) => {
 console.log("props inside Profile", props)

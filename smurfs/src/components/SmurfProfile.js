@@ -15,6 +15,7 @@ console.log("props inside Profile", props)
     return (
         <div>
         <div className="smurf-container">
+        <SmurfForm addSmurf={props.addSmurf}/>
         {props.smurfs.map((smurf) => (
             <div className="smurf" key={smurf.id}>
             <h2>Name: {smurf.name}</h2>
@@ -22,7 +23,6 @@ console.log("props inside Profile", props)
             <h2>Height: {smurf.height}</h2>
             </div>
         ))}
-        <SmurfForm />
         </div>
         </div>
     )

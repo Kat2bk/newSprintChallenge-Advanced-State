@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {gettingSmurfs, addSmurf} from "../actions";
+import {gettingSmurfs, addSmurf, deleteSmurf} from "../actions";
 import {connect} from "react-redux";
 import SmurfForm from "./SmurfForm";
 import "../index.css";
@@ -22,6 +22,7 @@ console.log("props inside Profile", props)
             <h2>Name: {smurf.name}</h2>
             <h2>Age: {smurf.age}</h2>
             <h2>Height: {smurf.height}</h2>
+            <button onClick={() => props.deleteSmurf(smurf.id)}>Delete</button>
             </div>
         ))}
         </div>
@@ -32,8 +33,9 @@ console.log("props inside Profile", props)
 const mapStateToProps = (state) => {
     return {
         smurfs: state.smurfs,
-        error: state.error
+        error: state.error,
+        isFetching: state.isFetching
     }
 }
 
-export default connect(mapStateToProps, {gettingSmurfs, addSmurf})(SmurfProfile);
+export default connect(mapStateToProps, {gettingSmurfs, addSmurf, deleteSmurf})(SmurfProfile);

@@ -2,7 +2,10 @@
 import {
     FETCHING_START,
     FETCHING_SUCCESS,
-    FETCHING_FAILURE
+    FETCHING_FAILURE,
+    POST_START,
+    POST_SUCCESS,
+    POST_FAILURE
 } from "../actions";
 
 const initialState = {
@@ -32,6 +35,23 @@ export const reducer = (state = initialState, action) => {
                 isFetching: false,
                 error: action.payload
             };
+        case POST_START:
+            return {
+                ...state,
+                isFetching: true
+            };
+        case POST_SUCCESS:
+            return {
+                ...state,
+                isFetching: false,
+                smurfs: action.payload
+            };
+        case POST_FAILURE:
+            return {
+                ...state,
+                error: action.payload,
+                isFetching: false
+            }
         default:
             return state;
     }

@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {gettingSmurfs} from "../actions";
+import {gettingSmurfs, addSmurf} from "../actions";
 import {connect} from "react-redux";
 import SmurfForm from "./SmurfForm";
 
@@ -15,6 +15,13 @@ console.log("props inside Profile", props)
     return (
         <div>
         <div className="smurf-container">
+        {props.smurfs.map((smurf) => (
+            <div className="smurf" key={smurf.id}>
+            <h2>Name: {smurf.name}</h2>
+            <h2>Age: {smurf.age}</h2>
+            <h2>Height: {smurf.height}</h2>
+            </div>
+        ))}
         <SmurfForm />
         </div>
         </div>
@@ -28,4 +35,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {gettingSmurfs})(SmurfProfile);
+export default connect(mapStateToProps, {gettingSmurfs, addSmurf})(SmurfProfile);

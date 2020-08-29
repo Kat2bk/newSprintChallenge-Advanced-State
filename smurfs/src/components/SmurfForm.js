@@ -20,9 +20,9 @@ const SmurfForm = (props) => {
     return (
         <div className="form-box">
         <form className="smurf-form">
-        <input type="text" name="name" onChange={handleChanges} value={} placeholder="Add name" />
-        <input type="text" name="age" onChange={handleChanges} value={} placeholder="Add age" />
-        <input type="text" name="height" onChange={handleChanges} value={} placeholder="Add height" />
+        <input type="text" name="name" onChange={handleChanges}  placeholder="Add name" />
+        <input type="text" name="age" onChange={handleChanges}  placeholder="Add age" />
+        <input type="text" name="height" onChange={handleChanges}  placeholder="Add height" />
         <button className="submit-button" type="submit">Add Smurf</button>
         </form>
         </div>

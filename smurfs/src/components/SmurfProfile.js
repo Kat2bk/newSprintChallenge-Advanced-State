@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import {gettingSmurfs} from "../actions";
 import {connect} from "react-redux";
+import SmurfForm from "./SmurfForm";
 
 const SmurfProfile = (props) => {
 console.log("props inside Profile", props)
@@ -14,6 +15,7 @@ console.log("props inside Profile", props)
     return (
         <div>
         <div className="smurf-container">
+        <SmurfForm />
         </div>
         </div>
     )
